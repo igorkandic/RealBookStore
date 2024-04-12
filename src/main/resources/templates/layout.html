@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
->
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -35,7 +35,7 @@
                 <a class="nav-link" th:href="@{/books}">Books</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/persons}">Users</a>
+                <a class="nav-link" sec:authorize="hasAuthority('VIEW_PERSONS_LIST')" th:href="@{/persons}">Users</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
