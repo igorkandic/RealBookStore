@@ -37,6 +37,7 @@ public class RoleRepository {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            LOG.error("Failed to fetch roles for user: " + userId);
         }
         return roles;
     }
